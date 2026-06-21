@@ -1,0 +1,32 @@
+cff-version: 1.2.0
+message: "If you use this software or dataset, please cite the article below."
+title: "Physics-Guided Bayesian Framework for HEA Decision Support"
+abstract: >-
+  Reproduction code and consolidated dataset for a three-layer Bayesian framework
+  that outputs a calibrated P(HEA) for any 5-component alloy from a 44-element pool,
+  integrating Miedema physics, a Gaussian-process posterior over experimental binary
+  mixing enthalpies, and a calibration layer trained on experimental HEA outcomes.
+type: software
+authors:
+  - family-names: "Dębski"
+    given-names: "Roman"
+    email: "rdebski@agh.edu.pl"
+    orcid: "https://orcid.org/0000-0003-3283-6032"
+license: MIT
+repository-code: "https://github.com/rdebski/phea-atlas"
+keywords:
+  - high-entropy alloys
+  - decision support
+  - Gaussian process
+  - calibrated probability
+  - Miedema model
+preferred-citation:
+  type: article
+  title: "A Physics-Guided Bayesian Framework for Decision Support in High-Entropy Alloy Discovery"
+  authors:
+    - family-names: "Dębski"
+      given-names: "Roman"
+      orcid: "https://orcid.org/0000-0003-3283-6032"
+  journal: "Knowledge-Based Systems"
+  year: 2026
+  # doi: "10.xxxx/xxxxx"   # TODO after acceptance
