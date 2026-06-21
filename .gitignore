@@ -16,6 +16,7 @@ venv/
 out/data/*.csv
 out/data/*.json
 out/data/*.pkl
+out/data/*.md
 out/models/*.pkl
 out/figures/*
 !out/**/.gitkeep
