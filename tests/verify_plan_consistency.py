@@ -1,5 +1,5 @@
 """
-Cross-check every quantitative claim in paper/kbs-in-a-nutshell.md against the
+Cross-check every quantitative claim in the manuscript against the
 actual output files.  Run standalone:  uv run python tests/verify_plan_consistency.py
 
 Prints PASS/FAIL per claim; exits non-zero if any FAIL.

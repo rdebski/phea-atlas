@@ -30,3 +30,9 @@ out/figures/*
 *.bbl
 *.blg
 *.out
+out/data/*.pdf
+out/data/*.tex
+out/data/*.aux
+out/data/*.log
+out/data/*.out
+out/data/*.gz

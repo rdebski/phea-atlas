@@ -1,4 +1,4 @@
-# Physics-Guided Bayesian Framework for HEA Decision Support
+# phea-atlas — Physics-Guided Bayesian P(HEA) for High-Entropy Alloy Discovery
 
 Calibrated probabilistic ranking for high-entropy alloy (HEA) discovery. The framework
 outputs a calibrated **P(HEA) ∈ [0, 1]** for any 5-component alloy drawn from a
@@ -11,8 +11,9 @@ outputs a calibrated **P(HEA) ∈ [0, 1]** for any 5-component alloy drawn from 
 3. **Calibration layer** — logistic regression on experimental HEA outcomes (n = 433),
    with temperature scaling, mapping thermodynamic + Hume-Rothery features to P(HEA).
 
-This is the reproduction code for the manuscript *A Physics-Guided Bayesian Framework
-for Decision Support in High-Entropy Alloy Discovery* (Knowledge-Based Systems).
+This is the reproduction code for the accompanying manuscript, currently under peer
+review. Citation details are in `CITATION.cff` and will be completed with the
+publication venue and DOI once the article is accepted.
 
 ## Install
 
@@ -45,9 +46,10 @@ Run in order (each writes to `out/`). The GP model ships pre-trained
 | 2 | `run/02_run_calibration.py`    | `out/models/calibration_model.pkl`, LOO-CV metrics |
 | 3 | `run/08_exact_atlas.py`        | `out/data/atlas_phea.csv` — **canonical atlas** (exact σ) |
 | 4 | `run/05_decision_value.py`     | `out/data/decision_value.json` — discovery-efficiency analysis |
-| 5 | `run/03_run_case_study.py`     | Al-Cu-Fe-Ni-Ti case study |
-| 6 | `run/07_landscape.py`, `run/04_atlas_maps.py` | manuscript figures (read the atlas from step 3) |
-| 7 | `run/06_independence_diagnostic.py` | independence-approximation diagnostic (appendix) |
+| 5 | `run/09_margin_value.py`       | `out/data/margin_value.json`, `out/figures/margin_value.*` — selective-prediction / calibrated-margin analysis |
+| 6 | `run/03_run_case_study.py`     | Al-Cu-Fe-Ni-Ti case study |
+| 7 | `run/07_landscape.py`, `run/04_atlas_maps.py` | manuscript figures (read the atlas from step 3) |
+| 8 | `run/06_independence_diagnostic.py` | independence-approximation diagnostic (appendix) |
 
 ```bash
 uv run python run/01_prepare_exp_data.py
@@ -127,7 +129,13 @@ uv run python tests/verify_plan_consistency.py   # checks manuscript numbers vs 
 
 ## Citation
 
-See `CITATION.cff`.
+Software and dataset are archived on Zenodo (concept DOIs — always resolve to the
+latest version):
+
+- **Code:** [10.5281/zenodo.20779815](https://doi.org/10.5281/zenodo.20779815)
+- **Dataset — probabilistic atlas:** [10.5281/zenodo.20779399](https://doi.org/10.5281/zenodo.20779399)
+
+See `CITATION.cff` for the full machine-readable entry.
 
 ## License
 
